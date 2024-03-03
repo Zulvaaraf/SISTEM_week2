@@ -1,0 +1,165 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 20px 10px;
+    max-width: 1300px;
+}
+
+.navbar-brand,
+.navbar-link {
+    width: calc(100%/2);
+}
+
+.navbar-brand {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+.navbar-link {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 120px;
+}
+
+.navbar-link li {
+    margin: auto;
+    list-style: none;
+}
+
+.navbar-link a {
+    text-decoration: none;
+}
+
+.social-media {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+main {
+    margin-top: 66px;
+}
+
+.banner-container {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(./asset//banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 30%;
+    height: 500px;
+}
+
+.banner-headline {
+    color: #fff;
+    font-size: 1.9rem;
+    text-transform: capitalize;
+    padding-bottom: 7px;
+}
+
+.banner-subheadline {
+    color: #fff;
+    font-size: 0.9rem;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.banner-btn {
+    padding: 10px;
+    width: 200px;
+    font-size: .9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: #7d4edc;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.banner-btn:hover {
+    background-color: #5c2ac0;
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-link {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: flex;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        font-size: 1.3rem;
+        color: #000;
+        cursor: pointer;
+    }
+
+    .menu-toggle,
+    .menu-close {
+        position: absolute;
+        margin: auto;
+        width: max-content;
+        height: max-content;
+        inset: 0;
+        font-size: 25px;
+        transition: .3s;
+    }
+
+    .menu-close {
+        opacity: 0;
+    }
+
+    .navbar {
+        width: 95%;
+    }
+
+    .banner-content {
+        width: 300px
+    }
+
+    .banner-headline {
+        font-size: 1.3rem;
+    }
+
+    .banner-subheadline {
+        font-size: 0.8rem;
+    }
+}
