@@ -65,6 +65,7 @@ header {
 
 main {
     margin-top: 66px;
+    background-color: #f2f2f2;
 }
 
 .banner-container {
@@ -113,13 +114,149 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: .3s;
+    box-shadow: 0 12px 25px rgba(76, 65, 151, 0.636);
 }
 
 .banner-btn:hover {
     background-color: #5c2ac0;
 }
 
-@media screen and (max-width: 768px) {
+.games-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.games-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.games-img {
+    background: url(./asset/games.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 200px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.games-genre {
+    position: absolute;
+    top: 173px;
+    left: 5px;
+    width: 50px;
+    padding: 3px;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #7d4edc;
+    border-radius: 10px;
+    color: #ffff;
+}
+
+.games-headline {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.games-select select {
+    padding: 5px 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: white;
+    background-color: #7d4edc;
+    border: none;
+    border-radius: 3px;
+}
+
+
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 15px;
+}
+
+.games {
+    width: 350px;
+    padding: 7px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 30px 60px rgba(137, 86, 248, 0.1);
+    text-decoration: none;
+    color: #000;
+}
+
+.games:hover {
+    background-color: #7d4edc;
+    transition: all .6s;
+}
+
+.games:hover .games-title,
+.games:hover .platform,
+.games:hover .platform-text,
+.games:hover .released,
+.games:hover .released-text {
+    color: #ffff;
+}
+
+.games:hover .games-description {
+    color: rgba(255, 255, 255, .6);
+}
+
+.games-title {
+    padding: 7px 0 5px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.games-description {
+    font-size: .8rem;
+}
+
+.games-divider {
+    margin: 7px 0;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.games:hover .games-divider {
+    border-color: rgba(255, 255, 255, 0.20)
+}
+
+.games-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.games-platform,
+.games-released {
+    width: calc(100% / 2);
+}
+
+.platform-text,
+.released-text {
+    font-size: .6rem;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: capitalize;
+}
+
+.platform,
+.released {
+    font-size: .8rem;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 569px) {
     .navbar {
         min-width: 280px;
     }
@@ -216,9 +353,142 @@ main {
     .banner-btn {
         font-size: .8rem;
     }
+
+    .games-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .games-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .games-img {
+        background: url(./asset/games.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        height: 200px;
+        margin: auto;
+        border-radius: 5px;
+    }
+
+    .games-genre {
+        position: absolute;
+        top: 173px;
+        left: 5px;
+        width: 50px;
+        padding: 3px;
+        font-size: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #7d4edc;
+        border-radius: 10px;
+        color: #ffff;
+    }
+
+    .games-headline {
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    .games-select select {
+        padding: 5px 10px;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: white;
+        background-color: #7d4edc;
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    .games-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 0;
+        gap: 15px;
+    }
+
+    .games {
+        width: 410px;
+        padding: 7px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0px 30px 60px rgba(137, 86, 248, 0.1);
+        text-decoration: none;
+        color: #000;
+    }
+
+    .games:hover {
+        background-color: #7d4edc;
+        transition: all .6s;
+    }
+
+    .games:hover .games-title,
+    .games:hover .platform,
+    .games:hover .platform-text,
+    .games:hover .released,
+    .games:hover .released-text {
+        color: #ffff;
+    }
+
+    .games:hover .games-description {
+        color: rgba(255, 255, 255, .6);
+    }
+
+    .games-title {
+        padding: 7px 0 5px 0;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .games-description {
+        font-size: .8rem;
+    }
+
+    .games-divider {
+        margin: 7px 0;
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .games:hover .games-divider {
+        border-color: rgba(255, 255, 255, 0.20)
+    }
+
+    .games-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .games-platform,
+    .games-released {
+        width: calc(100% / 2);
+    }
+
+    .platform-text,
+    .released-text {
+        font-size: .6rem;
+        color: rgba(0, 0, 0, 0.5);
+        text-transform: capitalize;
+    }
+
+    .platform,
+    .released {
+        font-size: .8rem;
+        text-transform: capitalize;
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 569px) {
     .navbar-menu {
         display: none;
     }
