@@ -79,29 +79,29 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    width: 30%;
+    margin: auto;
+    width: 350px;
     height: 500px;
 }
 
 .banner-headline {
     color: #fff;
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     text-transform: capitalize;
     padding-bottom: 7px;
 }
 
 .banner-subheadline {
     color: #fff;
-    font-size: 0.9rem;
-    padding-bottom: 20px;
+    font-size: 0.7rem;
+    padding-bottom: 15px;
     text-align: center;
 }
 
 .banner-btn {
-    padding: 10px;
-    width: 200px;
-    font-size: .9rem;
+    padding: 7px;
+    width: 100px;
+    font-size: .8rem;
     font-weight: 500;
     text-transform: capitalize;
     background-color: #7d4edc;
@@ -117,7 +117,11 @@ main {
     background-color: #5c2ac0;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
+    .navbar {
+        min-width: 280px;
+    }
+
     .navbar-link {
         display: none;
     }
@@ -147,19 +151,73 @@ main {
         opacity: 0;
     }
 
-    .navbar {
-        width: 95%;
+    .navbar-menu {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 600px);
+        pointer-events: none;
+        transition: .3s;
+        opacity: 0;
+    }
+
+    .navbar-menu-list {
+        background-color: #fff;
+        padding: 15px 0;
+    }
+
+    .navbar-menu-list .menu-link {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        text-decoration: none;
+        font-size: .9rem;
+        font-weight: 300;
+        color: #000;
+    }
+
+    .navbar-menu-list .menu-link:hover {
+        background-color: #7d4edc;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .show-menu {
+        opacity: 1;
+        pointer-events: initial;
+    }
+
+    .show-icon .menu-toggle {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+
+    .show-icon .menu-close {
+        opacity: 1;
+        transform: rotate(90deg);
+        font-size: 1.4rem;
     }
 
     .banner-content {
-        width: 300px
+        width: 250px;
     }
 
     .banner-headline {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .banner-subheadline {
-        font-size: 0.8rem;
+        font-size: .6rem;
+    }
+
+    .banner-btn {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-menu {
+        display: none;
     }
 }
