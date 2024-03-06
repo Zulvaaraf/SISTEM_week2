@@ -182,12 +182,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px 0;
+    margin: 20px 0;
     gap: 15px;
 }
 
 .games {
-    width: 350px;
+    width: 30%;
     padding: 7px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.6);
@@ -254,6 +254,20 @@ main {
 .released {
     font-size: .8rem;
     text-transform: capitalize;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7d4edc;
+    height: 50px;
+}
+
+.footer p {
+    font-size: 13px;
+    text-transform: capitalize;
+    color: #fff;
 }
 
 @media screen and (max-width: 569px) {
@@ -365,6 +379,7 @@ main {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        min-width: 300px;
         padding: 10px 15px;
     }
 
@@ -418,7 +433,7 @@ main {
     }
 
     .games {
-        width: 410px;
+        width: 86%;
         padding: 7px;
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.6);
