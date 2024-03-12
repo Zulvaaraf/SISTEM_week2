@@ -263,6 +263,8 @@ main {
 
 .whatsapp-link img {
     width: 70px;
+    cursor: pointer;
+    object-position: center;
 }
 
 .footer {
